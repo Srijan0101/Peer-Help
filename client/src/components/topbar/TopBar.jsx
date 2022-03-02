@@ -12,6 +12,8 @@ function TopBar() {
     dispatch({type: "LOGOUT"})
   }
 
+  const PF = "http://localhost:5000/images/";
+
   return( 
     <div className="top">
         <div className="topLeft">
@@ -41,7 +43,7 @@ function TopBar() {
         <div className="topRight">
         {user ? (
           <Link className="link" to="/settings">
-            <img className="topimg" src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" alt="user"></img>
+            <img className="topimg" src={PF+user.profilepPic} alt="user"></img>
           </Link>
         ) : (
           <ul className="topList">
@@ -64,4 +66,4 @@ function TopBar() {
 
 export default TopBar;
 
-<img className="topimg" src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" alt="user"></img>
+// {/* <img className="topimg" src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" alt="user"></img> */}
